@@ -390,7 +390,6 @@ const TransactionCreditScoreApp = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs hover:text-blue-300 break-all flex-1 truncate"
-                      style={{ color: 'oklch(0.464198 0.303088 264.197)' }}
                     >
                       {transactionHash}
                     </a>

@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Transaction Credit Score Kernel",
+    "version": "2.0.0",
+    "description": "API for calculating a credit score based on a wallet's transaction history across multiple chains."
+  },
+  "servers": [
+    {
+      "url": "https://credit-score-kernal.onrender.com"
+    }
+  ],
+  "paths": {
+    "/wallet-score/{wallet_address}": {
+      "get": {
+        "summary": "Get credit score for a wallet address",
+        "parameters": [
+          {
+            "name": "wallet_address",
+            "in": "path",
+            "required": true,
+            "description": "The wallet address to check.",
+            "schema": {
+              "type": "string",
+              "pattern": "^0x[a-fA-F0-9]{40}$",
+              "example": "0x1234567890abcdef1234567890abcdef12345678"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "example": 750
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "404": {
+            "description": "Wallet not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  }
+}

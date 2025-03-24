@@ -1,0 +1,23 @@
+{
+  "name": "hardhat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cnc": "hardhat clean && hardhat compile",
+    "deploy": "hardhat clean && hardhat compile && hardhat run scripts/deploy.ts --network sepolia"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.11",
+    "@oasisprotocol/sapphire-contracts": "^0.2.11",
+    "@openzeppelin/contracts": "^5.1.0",
+    "hardhat": "^2.22.14"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

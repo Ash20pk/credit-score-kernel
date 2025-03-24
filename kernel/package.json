@@ -1,0 +1,34 @@
+{
+  "name": "transaction-credit-score-kernel",
+  "version": "1.0.0",
+  "description": "KRNL off-chain kernel for calculating wallet credit scores based on transaction history",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "blockchain",
+    "credit-score",
+    "krnl",
+    "kernel",
+    "web3",
+    "defi"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "alchemy-sdk": "^3.5.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
